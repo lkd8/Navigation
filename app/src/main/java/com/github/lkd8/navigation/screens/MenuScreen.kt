@@ -15,6 +15,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.navigation.NavType
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -42,7 +43,7 @@ fun MenuScreen(modifier: Modifier = Modifier, navController: NavController) {
                 .align(Alignment.Center)
         ) {
             Button(
-                onClick = { navController.navigate("perfil") },
+                onClick = { navController.navigate("perfil/Fulano de Tal/27") },
                 colors = ButtonDefaults.buttonColors(Color.White),
                 modifier = Modifier.size(width = 200.dp, height = 48.dp)
             ) {
@@ -54,7 +55,7 @@ fun MenuScreen(modifier: Modifier = Modifier, navController: NavController) {
             }
             Spacer(modifier = Modifier.height(16.dp))
             Button(
-                onClick = { navController.navigate("pedidos") },
+                onClick = { navController.navigate("pedidos?cliente=Cliente XPTO") },
                 colors = ButtonDefaults.buttonColors(Color.White),
                 modifier = Modifier.size(width = 200.dp, height = 48.dp)
             ) {
